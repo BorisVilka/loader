@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "515980769904",
+    "project_id": "loader-4f55c",
+    "storage_bucket": "loader-4f55c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515980769904:android:2dd910f254d06a1ff912b5",
+        "android_client_info": {
+          "package_name": "org.atalx.main"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "515980769904-f23kf3qq7g1vrl5n26rtfib173qj51v6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvaEzk6eDApf8N393JH7Lxujmi9zNt6Ig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "515980769904-f23kf3qq7g1vrl5n26rtfib173qj51v6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
