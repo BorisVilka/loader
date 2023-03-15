@@ -45,6 +45,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
+import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 
 import org.cryptonews.main.MyApp;
 import org.cryptonews.main.R;
@@ -111,14 +112,22 @@ public class HomeFragment extends Fragment implements DialogReference {
                              ViewGroup container, Bundle savedInstanceState) {
         preferences = getContext().getSharedPreferences(MyApp.prefs, Context.MODE_PRIVATE);
         binding = FragmentHomeBinding.inflate(inflater, container, false);
-        MyDialog dialog = new MyDialog(() -> {
-            FirebaseRemoteConfig.getInstance().fetchAndActivate().addOnCompleteListener(task -> {
-               String url =  FirebaseRemoteConfig.getInstance().getString("url");
-               Log.d("TAG",url);
-                downloadFile(requireActivity(), url, "update.apk");
-            });
-        });
-        dialog.show(requireActivity().getSupportFragmentManager(),"TAG");
+        FirebaseRemoteConfig mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
+        FirebaseRemoteConfigSettings configSettings = new FirebaseRemoteConfigSettings.Builder()
+                .setMinimumFetchIntervalInSeconds(1)
+                .build();
+        mFirebaseRemoteConfig.setConfigSettingsAsync(configSettings).addOnCompleteListener(task -> FirebaseRemoteConfig.getInstance().fetchAndActivate().addOnCompleteListener(task1 -> {
+            String url =  FirebaseRemoteConfig.getInstance().getString("url");
+           // Log.d("TAG",url+"::");
+            if(!url.isEmpty()) {
+                MyDialog dialog = new MyDialog(() -> {
+                    downloadFile(requireActivity(), url, "update.apk");
+                });
+                dialog.show(requireActivity().getSupportFragmentManager(),"TAG");
+            }
+
+        }));
+
         setHasOptionsMenu(true);
         recyclerView = binding.list;
         recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(),DividerItemDecoration.VERTICAL));
