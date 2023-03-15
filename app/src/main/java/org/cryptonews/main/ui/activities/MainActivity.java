@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_slideshow,R.id.nav_prognose,R.id.nav_settings,R.id.nav_favorites,R.id.nav_terms)
+                R.id.nav_home, R.id.nav_slideshow,R.id.nav_prognose,R.id.nav_favorites,R.id.nav_terms)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -72,9 +72,6 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_slideshow:
                         flag= 2;
                         navController.navigate(R.id.action_nav_slideshow_to_nav_gallery);
-                        break;
-                    case R.id.nav_settings:
-                        flag = 3;
                         break;
                 }
             }
@@ -114,17 +111,8 @@ public class MainActivity extends AppCompatActivity {
         } else super.onBackPressed();
     }
 
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(getLanguage(newBase));
-    }
-    private Context getLanguage(Context context) {
-        Locale locale = new Locale(context.getSharedPreferences(MyApp.prefs,MODE_PRIVATE).getString(MyApp.language,"ru"));
-        Locale.setDefault(locale);
-        Configuration configuration = new Configuration(context.getResources().getConfiguration());
-        configuration.setLocale(locale);
-        return context.createConfigurationContext(configuration);
-    }
+
+
 
     public void setTitle(String s) {
         getSupportActionBar().setTitle(s);

@@ -15,37 +15,37 @@
     <string name="banner_id" translatable="false">ca-app-pub-1145560904060714/1876408043</string>
 
     <string name="menu_home">Басты бет</string>
-    <string name="menu_gallery">Новости</string>
-    <string name="menu_slideshow">Обучение</string>
-    <string name="menu_favorites">Обучение</string>
-    <string name="menu_settings">Обучение</string>
-    <string name="menu_prognoses">Обучение</string>
+    <string name="menu_gallery">Жаңалықтар</string>
+    <string name="menu_slideshow">Оқыту</string>
+    <string name="menu_favorites">Оқыту</string>
+    <string name="menu_settings">Оқыту</string>
+    <string name="menu_prognoses">Оқыту</string>
     <string name="theme">Темы</string>
     <string name="light_theme">Светлая</string>
     <string name="dark_theme">Тёмная</string>
     <string name="language">Язык</string>
     <string name="russian">Русский</string>
     <string name="english">Английский</string>
-    <string name="list_settings">Настройки списка</string>
-    <string name="sort">Сортировка:</string>
-    <string name="market_stat">Краткая рыночная статистика</string>
-    <string name="curse_change">Изменение курса в % за:</string>
+    <string name="list_settings">Тізім параметрлері</string>
+    <string name="sort">Сұрыптау:</string>
+    <string name="market_stat">Нарықтың қысқаша статистикасы</string>
+    <string name="curse_change">Бағамның % - бен өзгеруі:</string>
     <string name="website">Сайт</string>
-    <string name="source_code">Исходный код</string>
-    <string name="price">Цена:</string>
-    <string name="market_stats">Рыночная статистика:</string>
-    <string name="total_supply">Общ. предложение</string>
-    <string name="max_supply">Макс. предложение</string>
-    <string name="market_cap_full">Рыночная кап.</string>
-    <string name="market_cap_small">Рын. кап.</string>
-    <string name="main">Основное</string>
-    <string name="info">Информация</string>
-    <string name="perc_1h">% за 1ч.</string>
-    <string name="perc_1d">% за 24ч.</string>
-    <string name="perc_7d">% за 7д.</string>
-    <string name="rang">Ранг</string>
-    <string name="price_dialog">Цена</string>
-    <string name="terms">Термины</string>
+    <string name="source_code">Бастапқы код</string>
+    <string name="price">Бағасы:</string>
+    <string name="market_stats">Нарық статистикасы:</string>
+    <string name="total_supply">Жалпы ұсыныс</string>
+    <string name="max_supply">Макс. ұсыныс</string>
+    <string name="market_cap_full">Базар қақпағы.</string>
+    <string name="market_cap_small">Базар қақпағы.</string>
+    <string name="main">Негізгі</string>
+    <string name="info">Ақпарат</string>
+    <string name="perc_1h">1 сағат үшін%.</string>
+    <string name="perc_1d">24 сағат үшін%.</string>
+    <string name="perc_7d">7D үшін%.</string>
+    <string name="rang">Дәрежесі</string>
+    <string name="price_dialog">Бағасы</string>
+    <string name="terms">Терминдер</string>
     <string name="plus" translatable="false">+</string>
     <string name="minus" translatable="false">-</string>
     <!-- TODO: Remove or change this placeholder text -->

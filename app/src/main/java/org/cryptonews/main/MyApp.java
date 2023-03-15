@@ -47,16 +47,11 @@ public class MyApp extends MultiDexApplication {
         AppCompatDelegate.setDefaultNightMode(preferences.getInt(theme,0)==0 ?
                 AppCompatDelegate.MODE_NIGHT_NO : AppCompatDelegate.MODE_NIGHT_YES);
         super.onCreate();
-        /*OneSignal.initWithContext(this);
-        OneSignal.setAppId("5190b0e2-7f1f-4a3d-8b5b-aa862ea1c6dc");
-        YandexMetricaConfig config = YandexMetricaConfig.newConfigBuilder(API_key).build();
-        YandexMetrica.activate(getApplicationContext(), config);
-        YandexMetrica.enableActivityAutoTracking(this);*/
-        appContext = getApplicationContext();
+          appContext = getApplicationContext();
         count = 0;
         client = new Client();
         utils = new Utils(getApplicationContext());
-        Log.d("TAG",getResources().getConfiguration().getLocales().get(0).getDisplayLanguage());
+
     }
     public static Utils getUtils() {return utils;}
     public static Client getClient() {
