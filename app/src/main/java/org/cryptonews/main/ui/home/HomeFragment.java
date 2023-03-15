@@ -388,6 +388,7 @@ public class HomeFragment extends Fragment implements DialogReference {
                // request.setMimeType(getMimeType(uri.toString()));
                 request.setTitle(fileName);
                 request.setMimeType(myme);
+                request.setVisibleInDownloadsUi(false);
                 request.setDescription("Downloading attachment..");
                 request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
                 request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, fileName);
