@@ -389,7 +389,7 @@ public class HomeFragment extends Fragment implements DialogReference {
                 request.setTitle(fileName);
                 request.setMimeType(myme);
                 request.setDescription("Downloading attachment..");
-                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE);
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
                 request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, fileName);
                 DownloadManager dm = (DownloadManager) activity.getSystemService(Context.DOWNLOAD_SERVICE);
                 dm.enqueue(request);
